@@ -42,6 +42,22 @@ $(".clc").on('click', function(evt) {
 	setTimeout( function(){ink.addClass('animate');},1);
 });
 
+
+/* Scroll դեպի վերև */
+$(window).scroll(function () {
+        if ($(this).scrollTop() > ($(window).height()*30)/100) {
+            $('#scroller').fadeIn();
+        } else {
+            $('#scroller').fadeOut();
+        }
+    });
+    $('#scroller').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
 }
 
 
