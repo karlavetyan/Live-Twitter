@@ -469,3 +469,20 @@ text-align: center;
         
     
 }
+
+span.emoji{
+display: -moz-inline-box;
+-moz-box-orient:vertical;
+display:inline-block;
+vertical-align:baseline;
+*vertical-align:auto;
+*zoom:1;
+*display:inline;
+width: 18px; 
+height: 18px; 
+background-size: 17px; 
+background-repeat: no-repeat; 
+text-indent: -9999px; 
+margin: 0 2px; 
+line-height: 17px;
+}
