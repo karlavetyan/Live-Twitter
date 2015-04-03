@@ -1,0 +1,471 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=cyrillic,latin);
+
+@font-face {
+    font-family: OpenSansEmoji;
+    src: url(../fonts/OpenSansEmoji.ttf);
+   }
+
+*{
+padding:0px;
+margin:0px;
+}
+
+  *::-webkit-scrollbar {
+    width: 10px; }
+  *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2); }
+  *::-webkit-scrollbar-thumb {
+    background: #FF4081; }
+
+
+body {
+  background: #efefef;
+  font-family: 'Open Sans', OpenSansEmoji, Arial, Arian AMU, Verdana;
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+#res {
+margin-top: 120px;
+}
+
+
+
+
+.item {
+background:white;
+width: 71%;
+padding-bottom: 20px;
+margin: 20px auto; 
+border-radius: 2px;   
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+min-width: 600px;
+}
+
+.itemhead {
+padding: 20px;
+color: #575757;
+margin-bottom: 10px;
+}
+
+ .avatar {
+width: 65px;
+height: 65px;
+border-radius: 50%;
+background-size: cover;
+background-position: center center;
+float: left;
+}
+
+.retvit {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-size: cover;
+background-position: center center;
+float: left;
+background: #1FD23C;
+position: absolute;
+margin: 5px;
+}
+
+.repvit {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-size: cover;
+background-position: center center;
+float: left;
+background: #FF4081;
+position: absolute;
+margin: 5px;
+}
+  
+.itemhead #scrname{
+    font-weight: 400;
+    font-size: 22px;
+    margin: 3px 0 0 75px;
+}  
+  
+.itemhead #usname{
+    font-weight: 400;
+    font-size: 14px;
+    color: #00bcd4;
+} 
+
+.itemhead #twdate{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 2px 0 0 75px;
+} 
+  
+.item p {
+padding: 0px 22px;
+font-size: 16px;
+/* line-height: 28px; */
+margin:0;
+margin-top: -8px;
+}
+
+.item a {
+text-decoration:none;
+color:#00bcd4;
+font-weight:500;
+}
+
+.srch{
+background: #FFFF00;
+}
+
+
+#connect{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.64);
+  color: #ffffff;
+}
+
+#notf{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.64);
+  color: #ffffff;
+}
+
+#notf p{
+	margin-top:100px;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background: #2095F2;
+    position: absolute;
+    overflow: hidden;
+	-webkit-transition: height .5s; 
+    transition: height .5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center; 
+	flex-direction: column; 
+	align-items: center;
+    z-index: 3;
+}
+
+.up{
+    height: 19px;
+    background: #1875D1;
+    margin-bottom: 20px;
+    -webkit-transition: height .5s;   
+	transition: height .5s;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+}
+header .inperror{
+    width: 60%;
+    height: 20px;
+    padding: 2px 24px 4px 10px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+	
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    display: none;
+    cursor: default;
+    min-width: 450px;
+}
+
+header .inperror span[id="adder"]{
+   color: #FF4081;
+}
+
+header .inperror span span{
+   color:#000000;
+}
+
+header .input{
+    width: 60%;
+    height: 34px;
+    overflow: hidden;
+    padding: 0px 0px 5px 34px;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    margin: 0 auto;
+    -webkit-transition: all .5s;    
+    transition: all .5s;
+    margin-top: 17px;
+    min-width: 450px;
+}
+
+.input input{
+    color: #717171;
+    font-size: 16px;
+    width: 77%;
+    border: none;
+    padding: 12px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    float: left;
+    margin-left: -25px;
+}
+.input input:focus{
+    outline: none;
+}
+
+
+.bgWhite{
+	background: #fff;
+}
+
+
+
+
+button{
+	background: #FF4081;
+	color: #fff;
+	border: 0px solid rgba(0, 0, 0, 0);
+	font-size: 22px;
+	outline:none;
+	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	width: 52px;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 6px;
+	height: 39px;
+}
+
+.inkMe{
+	box-sizing:border-box;
+	overflow:hidden;
+	position: relative !important;
+	float: right;
+	font-family: 'Lato';
+}
+
+.ink{
+	position: absolute;
+	display: block;
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
+}
+
+.inkDefaultColor{
+	background-color: rgba(68, 204, 170, 0.45);
+}
+
+.ink.animate{
+	-webkit-animation:boom 800ms ease-out;
+	animation:boom 800ms ease-out;
+}
+
+.inkButCol1{
+background:#fff;
+color: #FE5151;
+}
+
+
+@-webkit-keyframes boom{
+	0%{
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+	}
+	100%{
+		transform: scale(2.5);
+		-webkit-transform: scale(2.5);
+		-moz-transform: scale(2.5);
+		opacity: 0;
+	}
+}
+
+@keyframes boom{
+	0%{
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+	}
+	100%{
+		transform: scale(2.5);
+		-webkit-transform: scale(2.5);
+		-moz-transform: scale(2.5);
+		opacity: 0;
+	}
+}
+
+.seting{
+    margin: 0 auto;
+
+    margin-top: 23px;
+    width: 60%;    
+    height: 79px;    
+    overflow: hidden;    
+    padding: 6px 24px 9px 10px;    
+    background: #fff;    
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);    
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2);    
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);    
+    border-radius: 2px;    
+    color: #FF4081;
+    display: none;        
+    min-width: 450px;
+    justify-content: center;    flex-direction: column;    align-items: center;    
+}
+
+.set_button{
+	    
+    color: #FF4081;                        
+    -webkit-transition: transform .5s;    
+    transition: transform .5s;
+    display: none;
+    font-size: 22px;        
+	position: relative;
+	cursor: pointer;    
+    padding: 4px 5px 5px;    
+    height: 31px;
+    float: right;
+    text-align: center;
+    width: 32px;
+}
+.indeg {
+-webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+-o-transform: rotate(180deg);
+transform: rotate(180deg);
+}
+
+
+input[type="text"]#filterkey{
+font-size: 15px;
+padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+border: 2px solid #FF4081;
+  outline: none;
+width: 100%;
+  
+border-radius: 3px;
+/* height: 100%; */
+overflow: hidden;
+color: #717171;
+margin-top: 2px;
+}
+
+#twnumcount {
+    margin: 6px 0px 0 10px;
+    text-align: left;
+    padding: 0 10px;
+    /* border: 2px solid; */
+    border-radius: 3px;
+    /* height: 39px; */
+}
+#twnumcount span{
+display: block;
+}
+
+#twnumcount input[type="text"]{
+font-size: 15px;
+  
+  
+border: none;
+  
+outline: none;
+width: 24px;
+  
+overflow: hidden;
+color: #717171;
+text-align: center;
+}
+
+
+#twnumcount  .check {
+	position: relative;
+}
+
+#twnumcount  .check label {
+	cursor: pointer;
+	color: #FF4081;
+	padding: 0 0 0 7px;
+}
+
+#twnumcount  .check label:before {
+	content: "\f096";
+	position: absolute;
+	left: 0px;
+	top: 1px;
+	width: 21px;
+	height: 19px;
+	font-family: FontAwesome;
+	font-size: 20px;
+	color: #FF4081;
+	background: #fff;
+}
+
+#twnumcount  .check label:after {
+	opacity: 0;
+	content: "\f00c";
+	position: absolute;
+	/* width: 16px; */
+	/* height: 16px; */
+	font-family: FontAwesome;    
+	font-size: 12px;    
+	color: #FF4081;
+	left: 2px;    
+	top: 4px;
+}
+
+
+#twnumcount  .check input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+.otherprops {
+    width: 100%;
+    /* margin-top: -2px; */
+    /* height: 64px; */
+    overflow: hidden;
+    text-align: center;
+    justify-content: space-between;    flex-direction: row;    align-items: center;
+    display: flex;
+    margin-left: 6px;
+    font-size: 15px;
+}
+
+.allopt {
+    width: 100%;
+        
+    
+}
