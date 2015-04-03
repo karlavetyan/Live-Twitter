@@ -220,7 +220,7 @@ function twittemplate(uname, effect, count, replay, retwit){
 						template = '<div class="item ' +effect + '" tweet_id="'+data.id+'">'+
 						retdiv+'<div class="itemhead">'+
 						'<div class="avatar" style="background-image: url('+data.user.profile_image_url.replace("_normal", '')+');"></div>'+
-						'<div id="scrname">'+data.user.name+'<sup><span id="usname"> '+scrname+'</span></sup></div><div id="twdate">'+convert_date(data.created_at)+'</div></div>'+
+						'<div id="scrname">'+emoji.a(data.user.name)+'<sup><span id="usname"> '+scrname+'</span></sup></div><div id="twdate">'+convert_date(data.created_at)+'</div></div>'+
 						'<p>'+emoji.a(urlreplace(twdata))+'</p></div>';
 						$('#res').append(template);
 						sort();
