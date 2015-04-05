@@ -43,20 +43,42 @@ $(".clc").on('click', function(evt) {
 });
 
 
-/* Scroll դեպի վերև */
-$(window).scroll(function () {
-        if ($(this).scrollTop() > ($(window).height()*30)/100) {
-            $('#scroller').fadeIn();
-        } else {
-            $('#scroller').fadeOut();
-        }
-    });
-    $('#scroller').click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 400);
-        return false;
-    });
+/* Շարժվող Header */
+(function($){
+	$(function(){	
+			var scroll = $(document).scrollTop();
+			var headerHeight = 105;
+			
+
+			$(window).scroll(function() {
+			ChangeHead();
+				var scrolled = $(document).scrollTop();
+								
+	if (scrolled > headerHeight){
+					$('header').addClass('off-canvas');
+					$('header').addClass('posfix');	
+				} else {
+					$('header').removeClass('off-canvas');
+					$('header').removeClass('posfix');
+				}
+
+			    if (scrolled < scroll && scrolled > headerHeight*2){
+				
+					$('header').addClass('fixed');
+					$('header').addClass('posfix');
+			    } else {
+				$('header').removeClass('fixed');		
+				 }
+				 
+				scroll = $(document).scrollTop();	
+			 });  
+    
+ 	});
+})(jQuery);   
+
+
+
+
 
 }
 
