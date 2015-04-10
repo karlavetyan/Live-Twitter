@@ -249,6 +249,8 @@ function twittemplate(uname, effect, count, replay, retwit){
 						if (data.retweeted_status != null) {scrname='<a href="https://twitter.com/'+data.user.screen_name+'" target="_blank">@'+data.user.screen_name+'</a><a href="https://twitter.com/'+data.retweeted_status.user.screen_name+'" target="_blank" style="color: #1FD23C;"><i class="fa fa-chevron-right" style="margin: 0 4px 0 10px; font-size: 13px;"></i> @'+data.retweeted_status.user.screen_name+' ('+$.trim(data.retweeted_status.user.name)+')</a>'; twdata = data.retweeted_status.text.replace(/\n/g, "<br/>"); retdiv = '<div class="retvit">Retweet</div>';}
 						else if (data.retweeted_status == null && data.in_reply_to_screen_name != null) {scrname='<a href="https://twitter.com/'+data.user.screen_name+'" target="_blank">@'+data.user.screen_name+'</a><a href="https://twitter.com/'+data.in_reply_to_screen_name+'" target="_blank" style="color: #FF4081;"><i class="fa fa-chevron-right" style="margin: 0 4px 0 10px; font-size: 13px;"></i> @'+data.in_reply_to_screen_name+'</a>'; twdata =  data.text.replace(/\n/g, "<br/>"); retdiv = ''; retdiv = '<div class="repvit">Replied</div>';} 
 						else {scrname='<a href="https://twitter.com/'+data.user.screen_name+'" target="_blank">@'+data.user.screen_name+'</a>'; twdata =  data.text.replace(/\n/g, "<br/>"); retdiv = '';}
+						var twposturl = 'https://twitter.com/'+data.user.screen_name+'/status/'+data.id_str;
+						if (data.hasOwnProperty('extended_entities')) {twposturlp = '<i class="fa fa-picture-o" style="margin-left: 10px;"><span><img src="'+data.extended_entities.media[0].media_url+'" height="150px"></span></i>'}else{twposturlp=''};
 						/*
 							var nvalue = "Я",
 								regEx = new RegExp(nvalue, "g"),
@@ -256,7 +258,7 @@ function twittemplate(uname, effect, count, replay, retwit){
 								twdata = twdata.replace(regEx, replaceMask);
 						*/
 						template = '<div class="item ' +effect + '" tweet_id="'+data.id+'">'+
-						retdiv+'<div class="itemhead">'+
+						retdiv+'<div class="usmediapic"><a href="'+twposturl+'" target="_blank">'+twposturlp+'<i class="fa fa-link" style="margin-left: 10px;"></i></a></div><div class="itemhead">'+
 						'<div class="avatar" style="background-image: url('+data.user.profile_image_url.replace("_normal", '')+');"></div>'+
 						'<div id="scrname">'+emoji.a(data.user.name)+'<sup><span id="usname"> '+scrname+'</span></sup></div><div id="twdate">'+convert_date(data.created_at)+'</div></div>'+
 						'<p>'+emoji.a(urlreplace(twdata))+'</p></div>';
